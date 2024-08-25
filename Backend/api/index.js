@@ -123,6 +123,9 @@ app.get("/bfhl", (req, res) => {
     operation_code: 1,
   });
 });
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
