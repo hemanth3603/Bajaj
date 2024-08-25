@@ -1,10 +1,10 @@
 // const express = require("express");
 // const bodyParser = require("body-parser");
 // const app = express();
-// const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // // Middleware to parse JSON bodies
-// app.use(express.json());
+
 // app.use(bodyParser.json());
 
 // // POST method route
@@ -71,7 +71,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-
+app.use(express.json());
 // Enable CORS for all origins
 const corsOptions = {
   origin: "*", // Replace with your frontend URL
@@ -123,6 +123,8 @@ app.get("/bfhl", (req, res) => {
     operation_code: 1,
   });
 });
-
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 // Export the handler for Vercel
 module.exports = app;
