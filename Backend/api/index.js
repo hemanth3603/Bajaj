@@ -119,7 +119,5 @@ app.get("/bfhl", (req, res) => {
   });
 });
 
-// Start the server
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
-});
+// Export the handler for Vercel
+module.exports = app;
