@@ -73,7 +73,13 @@ const cors = require("cors");
 const app = express();
 
 // Enable CORS for all origins
-app.use(cors());
+const corsOptions = {
+  origin:
+    "https://vercel.com/hemanth3603s-projects/bajaj-3pf8/AXP7N3UYparFQcP4t3xxme5hK2Nx", // Replace with your frontend URL
+  methods: ["GET", "POST"],
+};
+
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON request body
 app.use(bodyParser.json());
