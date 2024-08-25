@@ -74,8 +74,7 @@ const app = express();
 
 // Enable CORS for all origins
 const corsOptions = {
-  origin:
-    "https://vercel.com/hemanth3603s-projects/bajaj-3pf8/AXP7N3UYparFQcP4t3xxme5hK2Nx", // Replace with your frontend URL
+  origin: "*", // Replace with your frontend URL
   methods: ["GET", "POST"],
 };
 
